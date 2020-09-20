@@ -37,7 +37,7 @@ def json_file_content(link): #функция, которая скачивает 
 def write_to_file(name, s, filetype): #функция, которая записывает переданные ей данные в файл заданного формата
     file = open(name + filetype, 'w')
     file.write(s)
-    file.close
+    file.close()
 
 def main():
     wdir = input('Рабочая директория> ')
