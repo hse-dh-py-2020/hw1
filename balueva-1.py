@@ -18,13 +18,12 @@ def csv_file_content(text): #функция, которая создает из 
     freqdict = Counter(wordlist).most_common()
     content = 'Слово;Частотность\n'
     content += '\n'.join([';'.join([x[0],str(x[1])]) for x in freqdict])
-    content += '\n'
     return content
 
 def write_to_file(name, content): #функция, которая записывает переданные ей данные в файл заданного формата
     file = open(name, 'w')
     file.write(content)
-    file.close
+    file.close()
 
 def main():
     wdir = input('Рабочая директория> ')
